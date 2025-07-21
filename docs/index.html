@@ -121,10 +121,10 @@ d. Example Answer 4
                     const lines = qBlock.split('\n').filter(line => line.trim() !== '');
                     if (lines.length === 0) return;
 
-                    const questionMatch = lines[0].match(/^\d+\.\s*(.*):/);
+                    const questionMatch = lines[0].match(/^\d+\.\s*(.*)/);
                     if (!questionMatch) return;
 
-                    const question = questionMatch[1].trim() + ':';
+                    const question = questionMatch[1].trim();
                     const answers = [];
 
                     for (let i = 1; i < lines.length; i++) {
